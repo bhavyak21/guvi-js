@@ -1,4 +1,4 @@
-Difference between HTTP1.1 vs HTTP2
+1. Difference between HTTP1.1 vs HTTP2 :-
 HTTP stand for Hypertext Transfer Protocol. It is a protocol used by World Wide Web(WWW) to transfer data 
 between servers and clients. HTTP has evolved over the years and the latest version is HTTP/2, 
 which is an upgraded version of HTTP/1.1. 
@@ -19,5 +19,41 @@ instead of textual that converts all the messages in binary format. It works on 
 one TCP connection is used for multiple requests. HTTP/2 uses HPACK which is used to split data from header and 
 compresses it. The server sends all the other files like CSS & JS without the request of the client 
 using the PUSH frame.
+In conclusion, HTTP/2 is a significant improvement over HTTP/1.1 in terms of performance and efficiency.
+With features like multiplexing, binary protocol, header compression, server push, and stream prioritization,
+HTTP/2 offers faster and more reliable performance than its predecessor.
+
+
+2. Objects and its internal representation in Javascript :-
+Objects are important data types in javascript. Objects are different than primitive datatypes(like number,
+ string, boolean, etc.). Primitive data types contain one value but Objects can hold many values
+in form of Key: Value pair. These keys can be variables or functions and are called properties and methods,
+respectively, in the context of an object.
+Every object has some property associated with some value. These values can be accessed using these properties 
+associated with them.
+For ex. -
+
+var myCar = new Object();
+
+myCar.maker = 'Mercedes';
+
+myCar.model = 'S Class';
+
+myCar.color = Black;
+
+myCar.wheels = 4;
+
+After creating myCar object, the value inside the object can be accessed using keys.
+i.e.
+
+myCar.model  #Output: S Class
+
+These values can be accessed using brackets notation also.
+
+myCar[Model]  #Output: S Class
+
+Object Method - Methods are actions that can be performed on objects.
+We can create objects with Object Literal, with constructor, using the JavaScript keyword new, and Using 
+the Object.create method.
 
 
