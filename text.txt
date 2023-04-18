@@ -1,1 +1,23 @@
 Difference between HTTP1.1 vs HTTP2
+HTTP stand for Hypertext Transfer Protocol. It is a protocol used by World Wide Web(WWW) to transfer data 
+between servers and clients. HTTP has evolved over the years and the latest version is HTTP/2, 
+which is an upgraded version of HTTP/1.1. 
+
+HTTP/1.1: Let’s say that we have to make a request to the server for the google.com page and server responds
+to us as a resource google.com page. Before sending the request and the response, there is a TCP connection
+established between client & server. Again we make a request to the server for image img.jpg and 
+the server gives a response as an image img.jpg. The connection was not lost here after the first request 
+because we add a keep-alive header which is the part of the request so there is an open connection between 
+the server & client. There is a persistent connection which means several requests & responses are merged
+in a single connection. These are the drawbacks that lead to the creation of HTTP/2.
+The first problem is HTTP/1.1 transfer all the requests & responses in the plain text message form. 
+The second one is head of line blocking in which TCP connection blocked all other requests until 
+the response does not receive. All the information related to the header file is repeated in every request.
+
+HTTP/2: HTTP/2 was developed over the SPDY protocol. HTTP/2 works on the binary framing layer 
+instead of textual that converts all the messages in binary format. It works on multiplexing in which
+one TCP connection is used for multiple requests. HTTP/2 uses HPACK which is used to split data from header and 
+compresses it. The server sends all the other files like CSS & JS without the request of the client 
+using the PUSH frame.
+
+
