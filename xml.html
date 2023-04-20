@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML HTTP Request</title>
+</head>
+<body>
+    <script>
+        //1: create xhr object
+        //used to interact with the server via api
+        var request = new XMLHttpRequest();
+        console.log(request);
+        // 2: opening a connection
+        // 3 parameters
+        //htto method => GET
+        //url => https://restcountries.com/v3.1/all?fields=name,flags`
+        request.open('GET', "https://restcountries.com/v3.1/all?fields=name,flags`")
+        //3: send the connection
+        // initiating a bridge
+        request.send();
+
+        //4: server response
+        //whenever a page is loaded, you give me data
+        // event
+        // whenever an event is triggeredan action is performed
+        //onload - a global event
+        //function - accepts anonymous function(doesnt have a name)
+
+        request.onload= function(){
+            //console.log(1)
+
+        }
+
+
+    </script>
+
+</body>
+</html>
