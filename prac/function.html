@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Input(arr, n){
+            if(n == null){
+                console.log(arr[0])
+            }
+            else if(n<0){
+                console.log([])
+            }
+            else{
+                console.log(arr.slice(0,n))
+            }
+        }
+        Input([7, 9, 0, -2])
+        Input([0,6,4,5])
+        Input([1,2,3], 3)
+        Input([1,2,3,4], -3)
+
+    </script>
+</body>
+</html>
