@@ -8,15 +8,16 @@
 </head>
 <body>
     <script>
-        //1: create xhr object
+        //1: create XHR(XML HTTP Request) object
         //used to interact with the server via api
         var request = new XMLHttpRequest();
         console.log(request);
         // 2: opening a connection
         // 3 parameters
-        //htto method => GET
-        //url => https://restcountries.com/v3.1/all?fields=name,flags`
-        request.open('GET', "https://restcountries.com/v3.1/all?fields=name,flags`")
+        //a: http method => GET
+        //b: url => "https://restcountries.com/v3.1/all"
+        // true/false (optional parameter)
+        request.open('GET', "https://restcountries.com/v3.1/all")
         //3: send the connection
         // initiating a bridge
         request.send();
@@ -24,14 +25,23 @@
         //4: server response
         //whenever a page is loaded, you give me data
         // event
-        // whenever an event is triggeredan action is performed
+        // whenever an event is triggered, action is performed
         //onload - a global event
         //function - accepts anonymous function(doesnt have a name)
 
-        request.onload= function(){
-            //console.log(1)
+        request.onload = function(){
+            // console.log(1)
+            // console.log(request.response) //gives string
+            // console.log(JSON.parse(request.response))
+            var countriesData = JSON.parse(request.response)
+            console.log(countriesData)
+            console.log(countriesData.length)
+            console.log(countriesData[0].area)
+            for(var i = 0; i<countriesData.length; i++){
+                console.log("Country Name: "+ countriesData[i].name.common + "Area: " + countriesData[i].area)
+            }
 
-        }
+        }   
 
 
     </script>
